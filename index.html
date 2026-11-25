@@ -1,4 +1,3 @@
-11.25 2:21 pm
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -12,6 +11,7 @@
         .container { width: 100%; max-width: 760px; background: #1c2541; border-radius: 16px; padding: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.7); border: 1px solid #3a506b; transition: filter 0.25s ease; }
         .container.blurred { filter: blur(10px); pointer-events: none; user-select: none; }
         .header-title { text-align: center; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #34d399; padding: 12px; border-radius: 12px; font-size: 1.15rem; font-weight: bold; margin-bottom: 15px; }
+
         #login-section { display: flex; flex-direction: column; gap: 12px; }
         .form-group { display: flex; flex-direction: column; gap: 5px; text-align: right; }
         .form-group label { font-size: 0.9rem; color: #34d399; font-weight: bold; }
@@ -19,36 +19,45 @@
         .btn-main { background: #10b981; color: #0b132b; padding: 14px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.2s; margin-top: 5px; width: 100%; }
         .btn-main:hover { background: #059669; color: #fff; }
         .login-error { color: #ef4444; font-size: 0.85rem; text-align: center; display: none; font-weight: bold; }
+
         .footer-text { text-align: center; font-size: 0.78rem; color: #94a3b8; margin-top: 16px; border-top: 1px solid #3a506b; padding-top: 10px; line-height: 1.5; }
+
         #exam-section { display: none; }
         .status-panel { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; background: #0b132b; padding: 8px 12px; border-radius: 8px; border: 1px solid #3a506b; }
         .timer-badge { background: #ef4444; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s, background 0.2s; }
         .timer-badge.urgent { background: #dc2626; box-shadow: 0 0 12px rgba(239, 68, 68, 0.85); animation: pulseTimer 1s infinite; }
         @keyframes pulseTimer { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
         .user-badge { color: #34d399; font-weight: bold; font-size: 0.85rem; }
+
         .question-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; margin-bottom: 12px; background: #0b132b; padding: 8px; border-radius: 8px; border: 1px solid #3a506b; max-height: 145px; overflow-y: auto; }
         .grid-btn { background: #3a506b; color: #cbd5e1; border: none; border-radius: 4px; padding: 6px 0; font-size: 0.75rem; cursor: pointer; text-align: center; font-weight: bold; position: relative; }
         .grid-btn.answered { border: 1px solid #10b981; color: #34d399; }
         .grid-btn.marked { background: #b45309; color: #fef3c7; border: 1px solid #fbbf24; }
         .grid-btn.active { background: #10b981; color: #0b132b; outline: 2px solid #ffffff; }
+
         .tools-bar { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
         .tool-btn { flex: 1; min-width: 140px; background: #3a506b; color: #f8fafc; border: none; padding: 9px; border-radius: 8px; font-size: 0.85rem; cursor: pointer; font-weight: bold; text-align: center; }
         .tool-btn.marked-on { background: #d97706; color: #fff; }
+
         .question-card { background: #0b132b; border-radius: 10px; padding: 15px; border: 1px solid #3a506b; margin-bottom: 12px; }
         .question-header { display: flex; justify-content: space-between; color: #34d399; font-size: 0.85rem; margin-bottom: 8px; font-weight: bold; }
         .question-text { font-size: 0.98rem; line-height: 1.65; color: #f8fafc; margin-bottom: 12px; font-weight: 500; text-align: right; }
+
         .diagram-box { background: #111827; border: 1px solid #3a506b; border-radius: 10px; padding: 12px; margin-bottom: 14px; display: flex; justify-content: center; align-items: center; overflow-x: auto; }
         .diagram-table { width: 100%; border-collapse: collapse; }
         .diagram-table th, .diagram-table td { border: 1px solid #374151; padding: 7px; text-align: center; font-size: 0.85rem; color: #f3f4f6; }
         .diagram-table th { background: #1f2937; color: #34d399; }
+
         .options-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
         .option-item { background: #1c2541; border: 1px solid #3a506b; border-radius: 8px; padding: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #e2e8f0; font-size: 0.9rem; text-align: right; }
         .option-item.selected { border-color: #10b981; background: rgba(16, 185, 129, 0.25); color: white; font-weight: bold; }
         .option-item.eliminated { opacity: 0.2; text-decoration: line-through; pointer-events: none; }
+
         .action-buttons { display: flex; flex-direction: row-reverse; justify-content: space-between; gap: 10px; }
         .btn { padding: 10px 16px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; font-size: 0.9rem; }
         .btn-prev, .btn-next { background: #3a506b; color: white; flex: 1; }
         .btn-submit { background: #10b981; color: #0b132b; flex: 1.2; }
+
         #result-section { display: none; text-align: center; }
         .result-title { font-size: 1.2rem; color: #34d399; margin-bottom: 10px; font-weight: bold; }
         .lock-box { background: #0b132b; padding: 15px; border-radius: 10px; border: 1px solid #3a506b; margin-top: 15px; text-align: center; }
@@ -56,7 +65,9 @@
         .error-msg { color: #ef4444; font-size: 0.8rem; margin-top: 5px; display: none; font-weight: bold; }
         .report-content { display: none; text-align: right; margin-top: 15px; background: #0b132b; padding: 12px; border-radius: 8px; border: 1px solid #10b981; max-height: 320px; overflow-y: auto; }
         .report-item { padding: 8px 0; border-bottom: 1px solid #3a506b; font-size: 0.85rem; line-height: 1.5; }
+
         .warning-banner { display: none; position: fixed; top: 12px; left: 50%; transform: translateX(-50%); background: #991b1b; color: #fff; border: 1px solid #f87171; padding: 10px 18px; border-radius: 10px; font-size: 0.9rem; font-weight: bold; z-index: 2000; box-shadow: 0 10px 25px rgba(0,0,0,0.6); text-align: center; width: 92%; max-width: 540px; }
+
         .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(2, 6, 23, 0.82); z-index: 3000; justify-content: center; align-items: center; padding: 14px; }
         .modal-box { background: #1c2541; border: 1px solid #10b981; border-radius: 14px; padding: 20px; width: 100%; max-width: 440px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.75); }
         .modal-title { color: #34d399; font-size: 1.05rem; font-weight: bold; margin-bottom: 10px; }
@@ -65,7 +76,9 @@
     </style>
 </head>
 <body oncontextmenu="return false;" oncopy="return false;" oncut="return false;">
+
     <div id="warning-banner" class="warning-banner"></div>
+
     <div id="submit-modal" class="modal-backdrop">
         <div class="modal-box">
             <div class="modal-title">تأكيد تسليم الاختبار</div>
@@ -76,11 +89,13 @@
             </div>
         </div>
     </div>
+
     <div class="container" id="main-container">
         <div class="header-title">
             سلسلة الأمين في الفيزياء 2027<br>
             <span style="font-size: 0.82rem; color: #94a3b8;">اختبار 5 الأهمية البيولوجية للماء - 40 سؤالاً (50 درجة)</span>
         </div>
+
         <div id="login-section">
             <div class="form-group">
                 <label>اسم الطالب:</label>
@@ -92,21 +107,26 @@
             </div>
             <div id="login-error" class="login-error">الكود غير صحيح.</div>
             <button type="button" class="btn-main" id="start-btn" onclick="verifyAndStart()">دخول الاختبار</button>
+
             <div class="footer-text">
                 جميع الحقوق محفوظة أ/محمد أمين نظير 2027
             </div>
         </div>
+
         <div id="exam-section">
             <div class="status-panel">
                 <div class="timer-badge" id="timer-display">45:00</div>
                 <div class="user-badge" id="display-name">الطالب</div>
             </div>
+
             <div class="question-grid" id="question-grid"></div>
+
             <div class="tools-bar">
                 <button type="button" class="tool-btn" id="mark-btn" onclick="toggleMarkQuestion()">تحديد للمراجعة</button>
                 <button type="button" class="tool-btn" id="eliminate-btn" onclick="eliminateTwoOptions()">حذف إجابتين (مرة واحدة)</button>
                 <button type="button" class="tool-btn" id="hint-btn" onclick="showHint()">تلميح (<span id="hint-count">2</span> متبقي)</button>
             </div>
+
             <div class="question-card">
                 <div class="question-header">
                     <span id="question-number-lbl">السؤال 1 من 40</span>
@@ -116,18 +136,22 @@
                 <div id="diagram-container"></div>
                 <div class="options-list" id="options-container"></div>
             </div>
+
             <div class="action-buttons">
                 <button type="button" class="btn btn-submit" id="submit-exam-btn" onclick="openSubmitModal()">تسليم الاختبار</button>
                 <button type="button" class="btn btn-next" id="next-btn" onclick="nextQuestion()">التالي</button>
                 <button type="button" class="btn btn-prev" id="prev-btn" onclick="prevQuestion()">السابق</button>
             </div>
+
             <div class="footer-text">
                 جميع الحقوق محفوظة أ/محمد أمين نظير 2027
             </div>
         </div>
+
         <div id="result-section">
             <div class="result-title">تم تسليم الاختبار</div>
             <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 12px;">تم إرسال التقرير إلى البريد الإلكتروني.</p>
+
             <div class="lock-box">
                 <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">أدخل الكود لفتح الدرجة والإجابات الصحيحة والخاطئة:</p>
                 <input type="password" id="pin-input" class="pin-input" placeholder="••••" maxlength="10">
@@ -136,14 +160,17 @@
                 </div>
                 <div id="error-msg" class="error-msg">الكود غير صحيح.</div>
             </div>
+
             <div id="report-content" class="report-content">
                 <div id="report-items-container"></div>
             </div>
+
             <div class="footer-text">
                 جميع الحقوق محفوظة أ/محمد أمين نظير 2027
             </div>
         </div>
     </div>
+
     <form id="resultForm" action="https://formsubmit.co/aseer010moh@gmail.com" method="POST" style="display:none;">
         <input type="hidden" name="_subject" id="formSubject" value="تقرير اختبار 5 الأهمية البيولوجية للماء">
         <input type="hidden" name="_template" value="table">
@@ -153,331 +180,53 @@
         <input type="hidden" name="الملخص" id="formSummary">
         <textarea name="الغلطات" id="formMistakes"></textarea>
     </form>
+
     <script>
-        const svgHierarchy = '<svg width="330" height="110" viewBox="0 0 330 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="34" width="54" height="42" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.8"/><text x="35" y="59" fill="#34d399" font-size="10.5" text-anchor="middle" font-family="Segoe UI">الخلية</text><line x1="62" y1="55" x2="76" y2="55" stroke="#94a3b8" stroke-width="2"/><rect x="76" y="34" width="54" height="42" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/><text x="103" y="59" fill="#38bdf8" font-size="10.5" text-anchor="middle" font-family="Segoe UI">النسيج</text><line x1="130" y1="55" x2="144" y2="55" stroke="#94a3b8" stroke-width="2"/><rect x="144" y="34" width="54" height="42" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.8"/><text x="171" y="59" fill="#fbbf24" font-size="10.5" text-anchor="middle" font-family="Segoe UI">العضو</text><line x1="198" y1="55" x2="212" y2="55" stroke="#94a3b8" stroke-width="2"/><rect x="212" y="34" width="54" height="42" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1.8"/><text x="239" y="59" fill="#a78bfa" font-size="10.5" text-anchor="middle" font-family="Segoe UI">الجهاز</text><line x1="266" y1="55" x2="276" y2="55" stroke="#94a3b8" stroke-width="2"/><rect x="276" y="30" width="46" height="50" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1.8"/><text x="299" y="53" fill="#ecfdf5" font-size="9.5" text-anchor="middle" font-family="Segoe UI">جسم</text><text x="299" y="66" fill="#ecfdf5" font-size="9.5" text-anchor="middle" font-family="Segoe UI">الإنسان</text><text x="165" y="18" fill="#cbd5e1" font-size="10.5" text-anchor="middle" font-family="Segoe UI">التسلسل التركيبي في الكائنات الراقية</text></svg>';
-        const svgWaterDistribution = '<svg width="320" height="125" viewBox="0 0 320 125" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="25" width="290" height="32" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/><rect x="17" y="27" width="194" height="28" rx="4" fill="#0284c7" opacity="0.65"/><rect x="211" y="27" width="92" height="28" rx="4" fill="#10b981" opacity="0.55"/><text x="114" y="45" fill="#fff" font-size="11" text-anchor="middle" font-family="Segoe UI">داخل الخلايا: 47%</text><text x="257" y="45" fill="#fff" font-size="10.5" text-anchor="middle" font-family="Segoe UI">خارج الخلايا: 23%</text><text x="160" y="78" fill="#34d399" font-size="11.5" font-weight="bold" text-anchor="middle" font-family="Segoe UI">إجمالي الماء في الثدييات: نحو 70% من كتلة الجسم</text><text x="160" y="98" fill="#cbd5e1" font-size="10" text-anchor="middle" font-family="Segoe UI">خارج الخلايا يشمل بلازما الدم وسوائل الجسم الأخرى</text></svg>';
-        const svgEnzymeActivation = '<svg width="310" height="145" viewBox="0 0 310 145" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="115" x2="285" y2="115" stroke="#94a3b8" stroke-width="2"/><line x1="50" y1="115" x2="50" y2="20" stroke="#94a3b8" stroke-width="2"/><path d="M 65 110 Q 155 15 255 110" fill="none" stroke="#f87171" stroke-width="2.5"/><path d="M 65 110 Q 155 58 255 110" fill="none" stroke="#34d399" stroke-width="2.5"/><text x="155" y="28" fill="#f87171" font-size="10" text-anchor="middle" font-family="Segoe UI">طاقة التنشيط في غياب الإنزيم (أعلى)</text><text x="155" y="74" fill="#34d399" font-size="10" text-anchor="middle" font-family="Segoe UI">طاقة التنشيط في وجود الإنزيم (أقل)</text><text x="168" y="133" fill="#cbd5e1" font-size="10.5" text-anchor="middle" font-family="Segoe UI">سير التفاعل الكيميائي داخل الخلية</text></svg>';
-        const svgEnzymeOptimal = '<svg width="320" height="145" viewBox="0 0 320 145" xmlns="http://www.w3.org/2000/svg"><line x1="35" y1="112" x2="148" y2="112" stroke="#94a3b8" stroke-width="2"/><line x1="35" y1="112" x2="35" y2="22" stroke="#94a3b8" stroke-width="2"/><path d="M 42 110 Q 90 25 140 110" fill="none" stroke="#38bdf8" stroke-width="2.3"/><line x1="90" y1="42" x2="90" y2="112" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,3"/><text x="90" y="128" fill="#fbbf24" font-size="9.5" text-anchor="middle" font-family="Segoe UI">درجة حرارة مثلى</text><text x="35" y="15" fill="#38bdf8" font-size="9.5" text-anchor="start" font-family="Segoe UI">نشاط الإنزيم</text><line x1="180" y1="112" x2="305" y2="112" stroke="#94a3b8" stroke-width="2"/><line x1="180" y1="112" x2="180" y2="22" stroke="#94a3b8" stroke-width="2"/><path d="M 188 110 Q 242 28 296 110" fill="none" stroke="#34d399" stroke-width="2.3"/><line x1="242" y1="45" x2="242" y2="112" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,3"/><text x="242" y="128" fill="#fbbf24" font-size="9.5" text-anchor="middle" font-family="Segoe UI">درجة حموضة مثلى</text><text x="180" y="15" fill="#34d399" font-size="9.5" text-anchor="start" font-family="Segoe UI">معدل نشاط الإنزيم</text></svg>';
-        const tableCellStructures = '<table class="diagram-table"><tr><th>التركيب</th><th>الوظيفة الأساسية في الخلية</th><th>أين يتواجد؟</th></tr><tr><td>الجدار الخلوي</td><td>يحدد شكل الخلية ويغلف مكوناتها ويحميها</td><td>النباتات والفطريات والبكتيريا</td></tr><tr><td>الغشاء البلازمي</td><td>حماية المحتويات وتنظيم مرور المواد من وإلى الخلية</td><td>جميع خلايا الكائنات الحية</td></tr><tr><td>النواة</td><td>تحمل المادة الوراثية وتتحكم في أنشطة الخلية</td><td>الخلايا حقيقية النواة</td></tr><tr><td>السيتوبلازم</td><td>مادة هلامية معظمها ماء وتحوي مواد وعضيات للبقاء</td><td>داخل الخلية الحية</td></tr></table>';
         const questionsData = [
-            {
-                q: "1. تمثل الخلية الوحدة الأساسية للحياة وتُعد أصغر مكون مستقل في الكائنات الراقية. أي التسلسلات التالية صحيح من الأصغر إلى الأكبر؟",
-                diagram: '<div class="diagram-box">' + svgHierarchy + '</div>',
-                options: [
-                    "أ) خلية ثم نسيج ثم عضو ثم جهاز ثم جسم الكائن",
-                    "ب) نسيج ثم خلية ثم جهاز ثم عضو ثم جسم الكائن",
-                    "ج) عضو ثم خلية ثم نسيج ثم جهاز ثم جسم الكائن",
-                    "د) جهاز ثم عضو ثم نسيج ثم خلية ثم جسم الكائن"
-                ],
-                correct: 0, score: 1, hint: "راجع مخطط التسلسل التركيبي لجسم الإنسان في بداية الدرس."
-            },
-            {
-                q: "2. تُصنف الكائنات الحية بناءً على وجود أو غياب غشاء نووي يحيط بالمادة الوراثية إلى مجموعتين رئيسيتين هما:",
-                options: [
-                    "أ) بدائيات النواة وحقيقيات النواة",
-                    "ب) الفقاريات واللافقاريات",
-                    "ج) ذاتية التغذية وغير ذاتية التغذية",
-                    "د) وحيدة الخلية ومتعددة الخلايا فقط"
-                ],
-                correct: 0, score: 1, hint: "انظر إلى تصنيف الكائنات حسب الغشاء النووي في الدرس الخامس."
-            },
-            {
-                q: "3. أين توجد المادة الوراثية في خلية بدائية النواة مثل البكتيريا؟",
-                options: [
-                    "أ) داخل السيتوبلازم غير محاطة بغشاء نووي",
-                    "ب) داخل نواة مستقلة ذات غشاء مزدوج",
-                    "ج) داخل البلاستيدات الخضراء فقط",
-                    "د) داخل الفجوة العصارية المركزية"
-                ],
-                correct: 0, score: 1, hint: "في بدائيات النواة لا يوجد غشاء نووي يحيط بالمادة الوراثية."
-            },
-            {
-                q: "4. بماذا تتميز الجدر الخلوية السليلوزية للخلايا النباتية مقارنة بغيرها من الأغشية؟",
-                options: [
-                    "أ) بأنها منفذة للماء والأملاح",
-                    "ب) بأنها تمنع مرور الماء نهائياً",
-                    "ج) بأنها توجد في الخلايا الحيوانية فقط",
-                    "د) بأنها تنتج الطاقة من التنفس الخلوي"
-                ],
-                correct: 0, score: 1, hint: "راجع الملحوظة أسفل الجدار الخلوي في الدرس."
-            },
-            {
-                q: "5. أي تراكيب الخلية التالية يوجد في جميع خلايا الكائنات الحية وينظم مرور المواد من الخلية وإليها؟",
-                options: [
-                    "أ) الغشاء البلازمي",
-                    "ب) الجدار الخلوي",
-                    "ج) البلاستيدات الخضراء",
-                    "د) الفجوة العصارية المركزية"
-                ],
-                correct: 0, score: 1, hint: "راجع وصف ووظيفة وأماكن تواجد الغشاء البلازمي."
-            },
-            {
-                q: "6. ما الوظيفة الأساسية للنواة داخل الخلية حقيقية النواة؟",
-                options: [
-                    "أ) تحتوي على المادة الوراثية التي تحدد صفات الكائن وتتحكم في أنشطة الخلية",
-                    "ب) تخزين الغذاء والماء والأملاح الزائدة فقط",
-                    "ج) القيام بعملية البناء الضوئي بوجود الكلوروفيل",
-                    "د) نقل المواد المختلفة من مكان لآخر داخل الخلية فقط"
-                ],
-                correct: 0, score: 1, hint: "راجع بند النواة في تركيب الخلية."
-            },
-            {
-                q: "7. ما العضية المسؤولة عن إنتاج الطاقة في الخلية؟",
-                options: [
-                    "أ) الميتوكوندريا",
-                    "ب) البلاستيدات الخضراء",
-                    "ج) الشبكة الإندوبلازمية",
-                    "د) الفجوات"
-                ],
-                correct: 0, score: 1, hint: "تُعرف بأنها مراكز إنتاج الطاقة في الخلية."
-            },
-            {
-                q: "8. أي العضيات التالية توجد في الخلايا النباتية فقط وتتم فيها عملية البناء الضوئي لاحتوائها على مادة الكلوروفيل؟",
-                options: [
-                    "أ) البلاستيدات الخضراء",
-                    "ب) الميتوكوندريا",
-                    "ج) الشبكة الإندوبلازمية",
-                    "د) الغشاء البلازمي"
-                ],
-                correct: 0, score: 1, hint: "راجع بند البلاستيدات الخضراء في عضيات السيتوبلازم."
-            },
-            {
-                q: "9. تتكون خلايا الكائنات الحية من جزيئات عضوية وجزيئات غير عضوية. أي الاختيارات يمثل جزيئات غير عضوية وردت في الدرس؟",
-                options: [
-                    "أ) الأملاح المعدنية والماء",
-                    "ب) الكربوهيدرات والبروتينات",
-                    "ج) البروتينات والليبيدات",
-                    "د) الكربوهيدرات والليبيدات"
-                ],
-                correct: 0, score: 1, hint: "قارن بين الجزيئات العضوية وغير العضوية في بداية جزء الماء في الخلية الحية."
-            },
-            {
-                q: "10. بالاعتماد على الشكل المقابل لتوزيع الماء في جسم الثدييات، ما نسبة الماء خارج الخلايا (مثل بلازما الدم وسوائل الجسم الأخرى)؟",
-                diagram: '<div class="diagram-box">' + svgWaterDistribution + '</div>',
-                options: [
-                    "أ) نحو 23% من كتلة الجسم",
-                    "ب) نحو 47% من كتلة الجسم",
-                    "ج) نحو 70% من كتلة الجسم",
-                    "د) نحو 10% من كتلة الجسم"
-                ],
-                correct: 0, score: 2, hint: "الإجمالي نحو 70%، وداخل الخلايا نحو 47%، والباقي خارج الخلايا."
-            },
-            {
-                q: "11. أي العبارات التالية يفسر بقاء درجات الحرارة الداخلية للكائنات الحية مستقرة رغم التقلبات الخارجية؟",
-                options: [
-                    "أ) ارتفاع الحرارة النوعية للماء",
-                    "ب) انخفاض الحرارة النوعية للماء",
-                    "ج) غياب السيتوبلازم من الخلايا",
-                    "د) توقف التفاعلات الكيميائية في الجسم"
-                ],
-                correct: 0, score: 2, hint: "راجع أهمية الماء المتعلقة باستقرار درجات الحرارة الداخلية للكائنات الحية."
-            },
-            {
-                q: "12. كيف يساهم وجود الماء داخل السيتوبلازم في خلق ضغط داخلي مقاوم للقوى الخارجية المحيطة بالخلية؟",
-                options: [
-                    "أ) يدعم نجاح العمليات الكيميائية الحيوية داخل السيتوبلازم وتمكين العضيات من العمل بشكل سليم",
-                    "ب) يؤدي إلى انفجار النواة وتوقف نشاط العضيات",
-                    "ج) يمنع وصول الماء والأملاح إلى الخلية نهائياً",
-                    "د) يحول السيتوبلازم إلى جدار خلوي صلب"
-                ],
-                correct: 0, score: 2, hint: "راجع النتيجة المترتبة على الضغط الداخلي للسيتوبلازم في أهمية الماء."
-            },
-            {
-                q: "13. كيف يعمل الماء كمذيب عام ويسمح بحدوث التفاعلات الكيميائية الحيوية داخل الكائن الحي؟",
-                options: [
-                    "أ) من خلال إذابة الأملاح والعناصر الغذائية وحمل الغازات كالأكسجين وثاني أكسيد الكربون والتخلص من الفضلات",
-                    "ب) من خلال منع ذوبان الأملاح ومنع انتقال الغازات داخل الجسم",
-                    "ج) من خلال استهلاك الإنزيمات وتغيير تركيبها الكيميائي",
-                    "د) من خلال إيقاف عملية الأيض داخل الخلايا"
-                ],
-                correct: 0, score: 1, hint: "راجع النقاط الثلاث تحت عمل الماء كمذيب عام."
-            },
-            {
-                q: "14. ما المقصود بعملية الأيض داخل خلايا الكائنات الحية؟",
-                options: [
-                    "أ) مجموعة من التفاعلات البيوكيميائية المستمرة التي تحدث داخل خلايا الكائنات الحية وتتم في وجود الماء",
-                    "ب) حركة الحيوانات من مكان لآخر بحثاً عن الغذاء فقط",
-                    "ج) ترسب الأملاح خارج الخلايا دون أي تفاعل كيميائي",
-                    "د) انقسام الخلايا دون الحاجة إلى ماء أو طاقة"
-                ],
-                correct: 0, score: 1, hint: "راجع تعريف الأيض في بداية جزء الماء والتمثيل الغذائي."
-            },
-            {
-                q: "15. أي العمليات التالية يُعد مثالاً على عملية الهدم؟",
-                options: [
-                    "أ) تكسير سكر الجلوكوز أثناء التنفس الخلوي إلى ثاني أكسيد الكربون وماء لإنتاج طاقة",
-                    "ب) بناء البروتينات من الأحماض الأمينية",
-                    "ج) عملية البناء الضوئي لتكوين غذاء معقد",
-                    "د) تكوين جزيئات كبيرة معقدة من جزيئات بسيطة مع استهلاك طاقة"
-                ],
-                correct: 0, score: 2, hint: "الهدم يكسر الروابط في الجزيئات المعقدة لإطلاق الطاقة."
-            },
-            {
-                q: "16. أي العمليات التالية يُعد مثالاً على عملية البناء؟",
-                options: [
-                    "أ) بناء البروتينات من الأحماض الأمينية وعملية البناء الضوئي",
-                    "ب) تكسير الروابط الكيميائية بين ذرات الجزيئات المعقدة لإطلاق الطاقة",
-                    "ج) تحلل الجلوكوز أثناء التنفس الخلوي لإطلاق الطاقة",
-                    "د) تبخر الماء من سطح الكائن الحي"
-                ],
-                correct: 0, score: 1, hint: "قارن بين أمثلة الهدم وأمثلة البناء في الدرس."
-            },
-            {
-                q: "17. بالاعتماد على الشكل المقابل، ما أثر الإنزيم على طاقة التنشيط اللازمة لبدء التفاعل الكيميائي؟",
-                diagram: '<div class="diagram-box">' + svgEnzymeActivation + '</div>',
-                options: [
-                    "أ) يخفض طاقة التنشيط اللازمة لبدء التفاعل إلى مستويات أقل",
-                    "ب) يرفع طاقة التنشيط اللازمة لبدء التفاعل إلى مستويات أعلى",
-                    "ج) لا يغير طاقة التنشيط ولا يؤثر على سرعة التفاعل",
-                    "د) يجعل التفاعل مستحيلاً مهما توفرت الطاقة"
-                ],
-                correct: 0, score: 2, hint: "طاقة التنشيط في وجود الإنزيم أقل من طاقة التنشيط في غياب الإنزيم."
-            },
-            {
-                q: "18. من أي نوع من المواد تتكون الإنزيمات؟",
-                options: [
-                    "أ) مواد بروتينية تعمل كعوامل منشطة أو محفزة متخصصة",
-                    "ب) أملاح معدنية غير عضوية فقط",
-                    "ج) سكريات بسيطة تستهلك بالكامل في التفاعل",
-                    "د) غازات تذوب في السيتوبلازم دون تخصص"
-                ],
-                correct: 0, score: 1, hint: "راجع تعريف الإنزيمات في الدرس الخامس."
-            },
-            {
-                q: "19. وفقاً لنظرية القفل والمفتاح، يرتبط الإنزيم بالمادة التي يؤثر عليها عبر موقع يُسمى:",
-                options: [
-                    "أ) الموقع النشط، وترتبط به مادة التفاعل لتتحول إلى نواتج دون تغيير للإنزيم",
-                    "ب) الجدار الخلوي، وتتحول فيه مادة التفاعل إلى إنزيم جديد",
-                    "ج) الفجوة العصارية، حيث يتوقف التفاعل نهائياً",
-                    "د) الغشاء البلازمي، حيث يستهلك الإنزيم ولا يُعاد استخدامه"
-                ],
-                correct: 0, score: 2, hint: "راجع آلية عمل الإنزيم والموقع النشط ومادة التفاعل."
-            },
-            {
-                q: "20. بالاعتماد على المنحنيين المقابلين، ماذا يحدث لنشاط الإنزيم إذا انخفضت أو ارتفعت درجة الحرارة أو درجة الحموضة عن قيمتها المثلى؟",
-                diagram: '<div class="diagram-box">' + svgEnzymeOptimal + '</div>',
-                options: [
-                    "أ) يقل نشاط الإنزيم تدريجياً إلى أن يتوقف بالكامل",
-                    "ب) يزداد نشاط الإنزيم بلا حدود مهما تغيرت الظروف",
-                    "ج) يظل ثابتاً عند أقصى فاعلية عند أي قيمة",
-                    "د) يتحول الإنزيم إلى مادة متفاعلة جديدة"
-                ],
-                correct: 0, score: 2, hint: "راجع الملحوظة الخاصة بدرجة الحرارة المناسبة ودرجة الحموضة المثلى للإنزيم."
-            },
-            {
-                q: "21. أي العبارات التالية يصف إحدى خواص الإنزيمات بدقة؟",
-                options: [
-                    "أ) تزيد من سرعة التفاعلات دون أن تتأثر أو يتم تغييرها، وتختص بمادة متفاعلة واحدة",
-                    "ب) تتغير وتُستهلك تماماً بعد تحفيز تفاعل واحد فقط",
-                    "ج) تعمل بنفس الكفاءة عند أي درجة حموضة أو حرارة",
-                    "د) ترفع طاقة التنشيط وتبطئ التفاعلات الحيوية"
-                ],
-                correct: 0, score: 1, hint: "راجع النقاط الأربع تحت مما سبق يمكن استنتاج خواص الإنزيمات."
-            },
-            {
-                q: "22. يوضح الجدول المقابل بعض تراكيب الخلية الحية. أي صف يعبر عن وظيفة ومكان تواجد صحيحين؟",
-                diagram: '<div class="diagram-box">' + tableCellStructures + '</div>',
-                options: [
-                    "أ) جميع الصفوف الأربعة صحيحة طبقاً لتركيب الخلية في الدرس",
-                    "ب) الجدار الخلوي يوجد في الخلايا الحيوانية فقط ولا يوجد في النباتات",
-                    "ج) الغشاء البلازمي يوجد في النباتات فقط ولا يوجد في باقي الكائنات",
-                    "د) السيتوبلازم مادة صلبة خالية من الماء"
-                ],
-                correct: 0, score: 1, hint: "تحقق من وظيفة ومكان تواجد كل تركيب في الجدول."
-            },
-            {
-                q: "23. تُصنف حقيقيات النواة في الدرس إلى أربع ممالك. أي الممالك التالية تضم كائنات متعددة الخلايا ذاتية التغذية وتحتوي جدرها الخلوية على السليلوز؟",
-                options: [
-                    "أ) مملكة النبات",
-                    "ب) مملكة الحيوان",
-                    "ج) مملكة الفطريات",
-                    "د) مملكة الطلائعيات"
-                ],
-                correct: 0, score: 1, hint: "راجع خصائص مملكة النبات في تصنيف حقيقيات النواة."
-            },
-            {
-                q: "24. أي الممالك التالية تتكون جدرها الخلوية من مادة الكيتين وتكون غير ذاتية التغذية؟",
-                options: [
-                    "أ) مملكة الفطريات",
-                    "ب) مملكة النبات",
-                    "ج) مملكة الحيوان",
-                    "د) مملكة الطلائعيات"
-                ],
-                correct: 0, score: 1, hint: "راجع خصائص مملكة الفطريات مثل فطر الخميرة."
-            },
-            {
-                q: "25. بماذا تتميز خلايا مملكة الحيوان مقارنة بالخلايا النباتية؟",
-                options: [
-                    "أ) لا تحتوي خلاياها على جدر خلوية، وكائناتها متعددة الخلايا غير ذاتية التغذية",
-                    "ب) تحتوي على جدار خلوي من السليلوز وتقوم بالبناء الضوئي",
-                    "ج) تتكون غالباً من خلية واحدة ذاتية التغذية مثل الطحالب الذهبية",
-                    "د) تخلو من النواة والسيتوبلازم تماماً"
-                ],
-                correct: 0, score: 1, hint: "راجع خصائص مملكة الحيوان في الدرس الخامس."
-            },
-            {
-                q: "26. أي الحيوانات التالية يُعد من الفقاريات التي وردت في تصنيف مملكة الحيوان بالدرس؟",
-                options: [
-                    "أ) الأسماك والبرمائيات والزواحف والطيور والثدييات",
-                    "ب) الإسفنجيات واللاسعات والديدان والمفصليات",
-                    "ج) الرخويات والجلدشوكيات مثل نجم البحر",
-                    "د) قنديل البحر والمحار ونجم البحر فقط"
-                ],
-                correct: 0, score: 1, hint: "الفقاريات هي الحيوانات التي لها عمود فقري."
-            },
-            {
-                q: "27. أي الكائنات التالية يُعد من اللافقاريات التي تفتقر لوجود عمود فقري؟",
-                options: [
-                    "أ) الأسفنج وقنديل البحر ونجم البحر",
-                    "ب) الأسماك والطيور والثدييات",
-                    "ج) البرمائيات والزواحف والإنسان",
-                    "د) الضفدعة والحصان والتمساح"
-                ],
-                correct: 0, score: 1, hint: "راجع قائمة اللافقاريات في الدرس."
-            },
-            {
-                q: "28. أي العضيات التالية توجد في السيتوبلازم وتعمل على تخزين الغذاء والماء والأملاح الزائدة؟",
-                options: [
-                    "أ) الفجوات",
-                    "ب) الميتوكوندريا",
-                    "ج) البلاستيدات الخضراء",
-                    "د) النواة"
-                ],
-                correct: 0, score: 1, hint: "تكون كبيرة في النباتية وتُسمى فجوة عصارية، وصغيرة وكثيرة في الحيوانية."
-            },
-            {
-                q: "29. ما وظيفة الشبكة الإندوبلازمية داخل الخلية؟",
-                options: [
-                    "أ) تُستخدم لنقل المواد المختلفة من مكان إلى آخر داخل الخلية",
-                    "ب) إنتاج الطاقة من التنفس الخلوي",
-                    "ج) القيام بالبناء الضوئي بوجود الكلوروفيل",
-                    "د) إحاطة الخلية بجدار صلب منفذ للماء"
-                ],
-                correct: 0, score: 1, hint: "راجع وصف ووظيفة الشبكة الإندوبلازمية في عضيات السيتوبلازم."
-            },
-            {
-                q: "30. يتكون البروتوبلازم في الخلية حقيقية النواة من جزأين رئيسيين هما:",
-                options: [
-                    "أ) النواة والسيتوبلازم",
-                    "ب) الجدار الخلوي والغشاء البلازمي",
-                    "ج) الميتوكوندريا والبلاستيدات فقط",
-                    "د) الفجوة العصارية والجدار السليلوزي"
-                ],
-                correct: 0, score: 2, hint: "انظر إلى مخطط تركيب الخلية: الجدر والأغشية الخلوية مقابل البروتوبلازم."
-            },
-            { q: "31. (صح أم خطأ) تتكون الكائنات عديدة الخلايا من تجمع العديد من الخلايا، وتنتهي مستوياتها التركيبية بالمستوى الخلوي الذي يمثل الخلية.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع فقرة الكائنات وحيدة وعديدة الخلايا." },
-            { q: "32. (صح أم خطأ) معظم الخلايا الحية تحتوي على نواة بها مادة وراثية، أي تنتمي إلى حقيقيات النواة.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع الملحوظة بجوار حقيقيات النواة." },
-            { q: "33. (صح أم خطأ) مملكة الطلائعيات معظمها كائنات وحيدة الخلية وبعضها متعددة الخلايا بسيطة، وغالباً ما تكون مائية.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع خصائص مملكة الطلائعيات." },
-            { q: "34. (صح أم خطأ) يتواجد الماء في الكائن الحي داخل الخلايا فقط ولا يوجد خارج الخلايا.", options: ["أ) صح", "ب) خطأ"], correct: 1, hint: "يتواجد الماء داخل وخارج الخلايا على حد سواء." },
-            { q: "35. (صح أم خطأ) تبلغ نسبة الماء في الثدييات نحو 70% من كتلة الجسم، منها نحو 47% داخل الخلايا.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 2, hint: "راجع أرقام توزيع الماء في الثدييات." },
-            { q: "36. (صح أم خطأ) يُعد الماء العامل الأساسي في الحفاظ على التوازن الداخلي للجسم ودعم الأنشطة الكيميائية المعقدة للحياة.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع النقطة الرابعة في أهمية الماء للكائن الحي." },
-            { q: "37. (صح أم خطأ) عملية الهدم هي عملية تكوين جزيئات كبيرة ومعقدة التركيب من جزيئات بسيطة مع استهلاك طاقة.", options: ["أ) صح", "ب) خطأ"], correct: 1, hint: "هذا تعريف عملية البناء وليس الهدم." },
-            { q: "38. (صح أم خطأ) طاقة التنشيط هي الحد الأدنى من الطاقة اللازمة لبدء التفاعل الكيميائي.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 2, hint: "راجع تعريف طاقة التنشيط في درس الأيض والإنزيمات." },
-            { q: "39. (صح أم خطأ) يرتبط الموقع النشط للإنزيم بمادة التفاعل مما يساعد على تحويلها إلى نواتج التفاعل بكفاءة أكبر دون حدوث أي تغيير للإنزيم.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 2, hint: "راجع آلية عمل الإنزيم وفق نظرية القفل والمفتاح." },
-            { q: "40. (صح أم خطأ) تتأثر الإنزيمات في عملها بالرقم الهيدروجيني ودرجة الحرارة.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع الخاصية الرابعة في خواص الإنزيمات." }
+            { q: "1. تمثل الخلية الوحدة الأساسية للحياة وتُعد أصغر مكون مستقل في الكائنات الراقية. أي التسلسلات التالية صحيح من الأصغر إلى الأكبر؟", options: ["أ) خلية ثم نسيج ثم عضو ثم جهاز ثم جسم الكائن", "ب) نسيج ثم خلية ثم جهاز ثم عضو ثم جسم الكائن", "ج) عضو ثم خلية ثم نسيج ثم جهاز ثم جسم الكائن", "د) جهاز ثم عضو ثم نسيج ثم خلية ثم جسم الكائن"], correct: 0, score: 1, hint: "راجع التسلسل التركيبي في بداية الدرس." },
+            { q: "2. تُصنف الكائنات الحية بناءً على وجود أو غياب غشاء نووي يحيط بالمادة الوراثية إلى مجموعتين رئيسيتين هما:", options: ["أ) بدائيات النواة وحقيقيات النواة", "ب) الفقاريات واللافقاريات", "ج) ذاتية التغذية وغير ذاتية التغذية", "د) وحيدة الخلية ومتعددة الخلايا فقط"], correct: 0, score: 1, hint: "تصنيف الكائنات حسب وجود أو غياب الغشاء النووي." },
+            { q: "3. أين توجد المادة الوراثية في خلية بدائية النواة مثل البكتيريا؟", options: ["أ) داخل السيتوبلازم غير محاطة بغشاء نووي", "ب) داخل نواة مستقلة ذات غشاء مزدوج", "ج) داخل البلاستيدات الخضراء فقط", "د) داخل الفجوة العصارية المركزية"], correct: 0, score: 1, hint: "المادة الوراثية في بدائيات النواة غير محاطة بغشاء نووي." },
+            { q: "4. بماذا تتميز الجدر الخلوية السليلوزية للخلايا النباتية؟", options: ["أ) بأنها منفذة للماء والأملاح", "ب) بأنها تمنع مرور الماء نهائياً", "ج) بأنها توجد في الخلايا الحيوانية فقط", "د) بأنها تنتج الطاقة من التنفس الخلوي"], correct: 0, score: 1, hint: "راجع ملحوظة الجدار الخلوي السليلوزي." },
+            { q: "5. أي تراكيب الخلية التالية يوجد في جميع خلايا الكائنات الحية وينظم مرور المواد من الخلية وإليها؟", options: ["أ) الغشاء البلازمي", "ب) الجدار الخلوي", "ج) البلاستيدات الخضراء", "د) الفجوة العصارية المركزية"], correct: 0, score: 1, hint: "غشاء شبه منفذ يحيط بالخلية وينظم مرور المواد." },
+            { q: "6. ما الوظيفة الأساسية للنواة داخل الخلية حقيقية النواة؟", options: ["أ) تحتوي على المادة الوراثية التي تحدد صفات الكائن وتتحكم في أنشطة الخلية", "ب) تخزين الغذاء والماء والأملاح الزائدة فقط", "ج) القيام بعملية البناء الضوئي بوجود الكلوروفيل", "د) نقل المواد المختلفة من مكان لآخر داخل الخلية فقط"], correct: 0, score: 1, hint: "النواة تحمل المادة الوراثية وتتحكم في أنشطة الخلية." },
+            { q: "7. ما العضية المسؤولة عن إنتاج الطاقة في الخلية؟", options: ["أ) الميتوكوندريا", "ب) البلاستيدات الخضراء", "ج) الشبكة الإندوبلازمية", "د) الفجوات"], correct: 0, score: 1, hint: "مراكز إنتاج الطاقة في الخلية." },
+            { q: "8. أي العضيات التالية توجد في الخلايا النباتية فقط وتتم فيها عملية البناء الضوئي لاحتوائها على الكلوروفيل؟", options: ["أ) البلاستيدات الخضراء", "ب) الميتوكوندريا", "ج) الشبكة الإندوبلازمية", "د) الغشاء البلازمي"], correct: 0, score: 1, hint: "تحتوي على الكلوروفيل وتوجد في الخلايا النباتية فقط." },
+            { q: "9. تتكون خلايا الكائنات الحية من جزيئات عضوية وجزيئات غير عضوية. أي الاختيارات يمثل جزيئات غير عضوية؟", options: ["أ) الأملاح المعدنية والماء", "ب) الكربوهيدرات والبروتينات", "ج) البروتينات والليبيدات", "د) الكربوهيدرات والليبيدات"], correct: 0, score: 1, hint: "الماء والأملاح المعدنية من الجزيئات غير العضوية." },
+            { q: "10. في جسم الثدييات، تبلغ نسبة الماء نحو 70% من كتلة الجسم، منها نحو 47% داخل الخلايا. ما نسبة الماء خارج الخلايا؟", options: ["أ) نحو 23% من كتلة الجسم", "ب) نحو 47% من كتلة الجسم", "ج) نحو 70% من كتلة الجسم", "د) نحو 10% من كتلة الجسم"], correct: 0, score: 2, hint: "الفرق بين 70% و47% يساوي 23%." },
+            { q: "11. أي العبارات التالية يفسر بقاء درجات الحرارة الداخلية للكائنات الحية مستقرة رغم التقلبات الخارجية؟", options: ["أ) ارتفاع الحرارة النوعية للماء", "ب) انخفاض الحرارة النوعية للماء", "ج) غياب السيتوبلازم من الخلايا", "د) توقف التفاعلات الكيميائية في الجسم"], correct: 0, score: 2, hint: "يرجع ذلك إلى ارتفاع الحرارة النوعية للماء." },
+            { q: "12. كيف يساهم وجود الماء داخل السيتوبلازم في خلق ضغط داخلي مقاوم للقوى الخارجية المحيطة بالخلية؟", options: ["أ) يدعم نجاح العمليات الكيميائية الحيوية داخل السيتوبلازم وتمكين العضيات من العمل بشكل سليم", "ب) يؤدي إلى انفجار النواة وتوقف نشاط العضيات", "ج) يمنع وصول الماء والأملاح إلى الخلية نهائياً", "د) يحول السيتوبلازم إلى جدار خلوي صلب"], correct: 0, score: 2, hint: "يساهم في نجاح التفاعلات الحيوية وعمل العضيات سليم." },
+            { q: "13. كيف يعمل الماء كمذيب عام ويسمح بحدوث التفاعلات الكيميائية الحيوية داخل الكائن الحي؟", options: ["أ) من خلال إذابة الأملاح والعناصر الغذائية وحمل الغازات والتخلص من الفضلات", "ب) من خلال منع ذوبان الأملاح ومنع انتقال الغازات داخل الجسم", "ج) من خلال استهلاك الإنزيمات وتغيير تركيبها الكيميائي", "د) من خلال إيقاف عملية الأيض داخل الخلايا"], correct: 0, score: 1, hint: "إذابة الأملاح والعناصر الغذائية وحمل الغازات والتخلص من الفضلات." },
+            { q: "14. ما المقصود بعملية الأيض داخل خلايا الكائنات الحية؟", options: ["أ) مجموعة من التفاعلات البيوكيميائية المستمرة التي تحدث داخل خلايا الكائنات الحية وتتم في وجود الماء", "ب) حركة الحيوانات من مكان لآخر بحثاً عن الغذاء فقط", "ج) ترسب الأملاح خارج الخلايا دون أي تفاعل كيميائي", "د) انقسام الخلايا دون الحاجة إلى ماء أو طاقة"], correct: 0, score: 1, hint: "تفاعلات بيوكيميائية مستمرة تحدث في وجود الماء." },
+            { q: "15. أي العمليات التالية يُعد مثالاً على عملية الهدم؟", options: ["أ) تكسير سكر الجلوكوز أثناء التنفس الخلوي إلى ثاني أكسيد الكربون وماء لإنتاج طاقة", "ب) بناء البروتينات من الأحماض الأمينية", "ج) عملية البناء الضوئي لتكوين غذاء معقد", "د) تكوين جزيئات كبيرة معقدة من جزيئات بسيطة مع استهلاك طاقة"], correct: 0, score: 2, hint: "الهدم يكسر الروابط في الجزيئات المعقدة لإطلاق الطاقة." },
+            { q: "16. أي العمليات التالية يُعد مثالاً على عملية البناء؟", options: ["أ) بناء البروتينات من الأحماض الأمينية وعملية البناء الضوئي", "ب) تكسير الروابط الكيميائية بين ذرات الجزيئات المعقدة لإطلاق الطاقة", "ج) تحلل الجلوكوز أثناء التنفس الخلوي لإطلاق الطاقة", "د) تبخر الماء من سطح الكائن الحي"], correct: 0, score: 1, hint: "بناء البروتينات من الأحماض الأمينية والبناء الضوئي." },
+            { q: "17. ما أثر الإنزيم على طاقة التنشيط اللازمة لبدء التفاعل الكيميائي؟", options: ["أ) يخفض طاقة التنشيط اللازمة لبدء التفاعل إلى مستويات أقل", "ب) يرفع طاقة التنشيط اللازمة لبدء التفاعل إلى مستويات أعلى", "ج) لا يغير طاقة التنشيط ولا يؤثر على سرعة التفاعل", "د) يجعل التفاعل مستحيلاً مهما توفرت الطاقة"], correct: 0, score: 2, hint: "طاقة التنشيط في وجود الإنزيم أقل منها في غيابه." },
+            { q: "18. من أي نوع من المواد تتكون الإنزيمات؟", options: ["أ) مواد بروتينية تعمل كعوامل منشطة أو محفزة متخصصة", "ب) أملاح معدنية غير عضوية فقط", "ج) سكريات بسيطة تستهلك بالكامل في التفاعل", "د) غازات تذوب في السيتوبلازم دون تخصص"], correct: 0, score: 1, hint: "الإنزيمات مواد بروتينية." },
+            { q: "19. وفقاً لنظرية القفل والمفتاح، يرتبط الإنزيم بالمادة التي يؤثر عليها عبر موقع يُسمى:", options: ["أ) الموقع النشط، وترتبط به مادة التفاعل لتتحول إلى نواتج دون تغيير للإنزيم", "ب) الجدار الخلوي، وتتحول فيه مادة التفاعل إلى إنزيم جديد", "ج) الفجوة العصارية، حيث يتوقف التفاعل نهائياً", "د) الغشاء البلازمي، حيث يستهلك الإنزيم ولا يُعاد استخدامه"], correct: 0, score: 2, hint: "الموقع النشط يرتبط بمادة التفاعل." },
+            { q: "20. ماذا يحدث لنشاط الإنزيم إذا انخفضت أو ارتفعت درجة الحرارة أو درجة الحموضة عن قيمتها المثلى؟", options: ["أ) يقل نشاط الإنزيم تدريجياً إلى أن يتوقف بالكامل", "ب) يزداد نشاط الإنزيم بلا حدود مهما تغيرت الظروف", "ج) يظل ثابتاً عند أقصى فاعلية عند أي قيمة", "د) يتحول الإنزيم إلى مادة متفاعلة جديدة"], correct: 0, score: 2, hint: "يقل نشاط الإنزيم تدريجياً حتى يتوقف." },
+            { q: "21. أي العبارات التالية يصف إحدى خواص الإنزيمات بدقة؟", options: ["أ) تزيد من سرعة التفاعلات دون أن تتأثر أو يتم تغييرها، وتختص بمادة متفاعلة واحدة", "ب) تتغير وتُستهلك تماماً بعد تحفيز تفاعل واحد فقط", "ج) تعمل بنفس الكفاءة عند أي درجة حموضة أو حرارة", "د) ترفع طاقة التنشيط وتبطئ التفاعلات الحيوية"], correct: 0, score: 1, hint: "متخصصة وتزيد سرعة التفاعل دون أن تتأثر." },
+            { q: "22. أي تراكيب الخلية التالية يمثل مادة هلامية يتكون معظمها من الماء وتحتوي على مواد وعضيات؟", options: ["أ) السيتوبلازم", "ب) الجدار الخلوي", "ج) النواة", "د) الغشاء البلازمي"], correct: 0, score: 1, hint: "السيتوبلازم مادة هلامية معظمها ماء." },
+            { q: "23. أي الممالك التالية تضم كائنات متعددة الخلايا ذاتية التغذية وتحتوي جدرها الخلوية على السليلوز؟", options: ["أ) مملكة النبات", "ب) مملكة الحيوان", "ج) مملكة الفطريات", "د) مملكة الطلائعيات"], correct: 0, score: 1, hint: "جدرها الخلوية من السليلوز وذاتية التغذية." },
+            { q: "24. أي الممالك التالية تتكون جدرها الخلوية من مادة الكيتين وتكون غير ذاتية التغذية؟", options: ["أ) مملكة الفطريات", "ب) مملكة النبات", "ج) مملكة الحيوان", "د) مملكة الطلائعيات"], correct: 0, score: 1, hint: "جدرها الخلوية من الكيتين مثل فطر الخميرة." },
+            { q: "25. بماذا تتميز خلايا مملكة الحيوان مقارنة بالخلايا النباتية؟", options: ["أ) لا تحتوي خلاياها على جدر خلوية، وكائناتها متعددة الخلايا غير ذاتية التغذية", "ب) تحتوي على جدار خلوي من السليلوز وتقوم بالبناء الضوئي", "ج) تتكون غالباً من خلية واحدة ذاتية التغذية مثل الطحالب الذهبية", "د) تخلو من النواة والسيتوبلازم تماماً"], correct: 0, score: 1, hint: "خلايا الحيوان لا تحتوي على جدر خلوية." },
+            { q: "26. أي الحيوانات التالية يُعد من الفقاريات التي وردت في تصنيف مملكة الحيوان بالدرس؟", options: ["أ) الأسماك والبرمائيات والزواحف والطيور والثدييات", "ب) الإسفنجيات واللاسعات والديدان والمفصليات", "ج) الرخويات والجلدشوكيات مثل نجم البحر", "د) قنديل البحر والمحار ونجم البحر فقط"], correct: 0, score: 1, hint: "حيوانات لها عمود فقري." },
+            { q: "27. أي الكائنات التالية يُعد من اللافقاريات التي تفتقر لوجود عمود فقري؟", options: ["أ) الأسفنج وقنديل البحر ونجم البحر", "ب) الأسماك والطيور والثدييات", "ج) البرمائيات والزواحف والإنسان", "د) الضفدعة والحصان والتمساح"], correct: 0, score: 1, hint: "حيوانات تفتقر لوجود عمود فقري." },
+            { q: "28. أي العضيات التالية توجد في السيتوبلازم وتعمل على تخزين الغذاء والماء والأملاح الزائدة؟", options: ["أ) الفجوات", "ب) الميتوكوندريا", "ج) البلاستيدات الخضراء", "د) النواة"], correct: 0, score: 1, hint: "تخزين الغذاء والماء والأملاح الزائدة." },
+            { q: "29. ما وظيفة الشبكة الإندوبلازمية داخل الخلية؟", options: ["أ) تُستخدم لنقل المواد المختلفة من مكان إلى آخر داخل الخلية", "ب) إنتاج الطاقة من التنفس الخلوي", "ج) القيام بالبناء الضوئي بوجود الكلوروفيل", "د) إحاطة الخلية بجدار صلب منفذ للماء"], correct: 0, score: 1, hint: "نقل المواد المختلفة داخل الخلية." },
+            { q: "30. يتكون البروتوبلازم في الخلية حقيقية النواة من جزأين رئيسيين هما:", options: ["أ) النواة والسيتوبلازم", "ب) الجدار الخلوي والغشاء البلازمي", "ج) الميتوكوندريا والبلاستيدات فقط", "د) الفجوة العصارية والجدار السليلوزي"], correct: 0, score: 2, hint: "البروتوبلازم يشمل النواة والسيتوبلازم." },
+            { q: "31. (صح أم خطأ) تتكون الكائنات عديدة الخلايا من تجمع العديد من الخلايا، والخلية تمثل أصغر مكون مستقل.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع بداية الدرس." },
+            { q: "32. (صح أم خطأ) معظم الخلايا الحية تحتوي على نواة بها مادة وراثية، أي تنتمي إلى حقيقيات النواة.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع ملحوظة حقيقيات النواة." },
+            { q: "33. (صح أم خطأ) مملكة الطلائعيات معظمها كائنات وحيدة الخلية وبعضها متعددة الخلايا بسيطة، وغالباً ما تكون مائية.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع خصائص الطلائعيات." },
+            { q: "34. (صح أم خطأ) يتواجد الماء في الكائن الحي داخل الخلايا فقط ولا يوجد خارج الخلايا.", options: ["أ) صح", "ب) خطأ"], correct: 1, hint: "يتواجد داخل وخارج الخلايا على حد سواء." },
+            { q: "35. (صح أم خطأ) تبلغ نسبة الماء في الثدييات نحو 70% من كتلة الجسم، منها نحو 47% داخل الخلايا.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 2, hint: "راجع توزيع الماء في الثدييات." },
+            { q: "36. (صح أم خطأ) يُعد الماء العامل الأساسي في الحفاظ على التوازن الداخلي للجسم ودعم الأنشطة الكيميائية المعقدة للحياة.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع أهمية الماء للكائن الحي." },
+            { q: "37. (صح أم خطأ) عملية الهدم هي عملية تكوين جزيئات كبيرة ومعقدة التركيب من جزيئات بسيطة مع استهلاك طاقة.", options: ["أ) صح", "ب) خطأ"], correct: 1, hint: "هذا تعريف عملية البناء." },
+            { q: "38. (صح أم خطأ) طاقة التنشيط هي الحد الأدنى من الطاقة اللازمة لبدء التفاعل الكيميائي.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 2, hint: "راجع تعريف طاقة التنشيط." },
+            { q: "39. (صح أم خطأ) يرتبط الموقع النشط للإنزيم بمادة التفاعل مما يساعد على تحويلها إلى نواتج التفاعل دون تغيير للإنزيم.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 2, hint: "راجع آلية عمل الإنزيم." },
+            { q: "40. (صح أم خطأ) تتأثر الإنزيمات في عملها بالرقم الهيدروجيني ودرجة الحرارة.", options: ["أ) صح", "ب) خطأ"], correct: 0, score: 1, hint: "راجع خواص الإنزيمات." }
         ];
+
         const totalQuestions = questionsData.length;
-        const maxTotalScore = questionsData.reduce(function (acc, item) { return acc + item.score; }, 0);
+        const maxTotalScore = 50;
         let currentIdx = 0;
         let userAnswers = new Array(totalQuestions).fill(null);
         let markedQuestions = new Array(totalQuestions).fill(false);
@@ -491,39 +240,83 @@
         let activeCode = "";
         let examStartTime = 0;
         const targetEmail = "aseer010moh@gmail.com";
-        function hasThreeWords(str) {
-            const parts = str.trim().split(" ").filter(function (w) { return w.length > 0; });
-            return parts.length >= 3;
-        }
-        function isValidCodeRange(codeStr) {
-            const cleaned = codeStr.trim();
-            if (!cleaned || cleaned.length !== 3) return false;
-            for (let i = 0; i < cleaned.length; i++) {
-                if (cleaned[i] < "0" || cleaned[i] > "9") return false;
+
+        function verifyAndStart() {
+            const nameEl = document.getElementById("student-name");
+            const codeEl = document.getElementById("student-code");
+            const errEl = document.getElementById("login-error");
+            const nameVal = (nameEl.value || "").trim();
+            const codeVal = (codeEl.value || "").trim();
+
+            const words = nameVal.split(" ").filter(function (item) { return item !== ""; });
+            const codeNumber = Number(codeVal);
+
+            if (words.length < 3) {
+                errEl.textContent = "يرجى إدخال الاسم ثلاثياً.";
+                errEl.style.display = "block";
+                return;
             }
-            const num = parseInt(cleaned, 10);
-            return num >= 300 && num <= 400;
+
+            if (codeVal === "" || isNaN(codeNumber) || codeNumber < 300 || codeNumber > 400) {
+                errEl.textContent = "الكود غير صحيح.";
+                errEl.style.display = "block";
+                return;
+            }
+
+            activeCode = String(codeNumber);
+            errEl.style.display = "none";
+
+            currentIdx = 0;
+            userAnswers = new Array(totalQuestions).fill(null);
+            markedQuestions = new Array(totalQuestions).fill(false);
+            timeLeft = 2700;
+            urgentAlertShown = false;
+            eliminateUsed = false;
+            hintCount = 2;
+            tabSwitchCount = 0;
+            examLocked = false;
+            examStartTime = Date.now();
+
+            const timerBadge = document.getElementById("timer-display");
+            timerBadge.classList.remove("urgent");
+            timerBadge.textContent = "45:00";
+
+            document.getElementById("hint-count").textContent = hintCount;
+            document.getElementById("eliminate-btn").style.opacity = "1";
+            document.getElementById("hint-btn").style.opacity = "1";
+            document.getElementById("display-name").textContent = nameVal;
+            document.getElementById("login-section").style.display = "none";
+            document.getElementById("exam-section").style.display = "block";
+
+            buildGrid();
+            loadQuestion(0);
+            startTimer();
         }
+
         function playAlertSound() {
             try {
                 const AudioCtx = window.AudioContext || window.webkitAudioContext;
                 const ctx = new AudioCtx();
                 if (ctx.state === "suspended") ctx.resume();
+
                 const pulses = [
                     { start: 0.0, dur: 0.22, f1: 1450, f2: 880 },
                     { start: 0.26, dur: 0.22, f1: 1550, f2: 920 },
                     { start: 0.52, dur: 0.25, f1: 1650, f2: 960 },
                     { start: 0.82, dur: 0.30, f1: 1750, f2: 1000 }
                 ];
+
                 pulses.forEach(function (p) {
                     const osc = ctx.createOscillator();
                     const gain = ctx.createGain();
-                    osc.type = 'square';
+                    osc.type = "square";
                     osc.frequency.setValueAtTime(p.f1, ctx.currentTime + p.start);
                     osc.frequency.linearRampToValueAtTime(p.f2, ctx.currentTime + p.start + p.dur);
+
                     gain.gain.setValueAtTime(0.001, ctx.currentTime + p.start);
                     gain.gain.exponentialRampToValueAtTime(0.6, ctx.currentTime + p.start + 0.02);
                     gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + p.start + p.dur);
+
                     osc.connect(gain);
                     gain.connect(ctx.destination);
                     osc.start(ctx.currentTime + p.start);
@@ -531,30 +324,317 @@
                 });
             } catch (e) {}
         }
+
         function showWarningBanner(text, durationMs) {
-            const banner = document.getElementById('warning-banner');
-            banner.innerText = text;
-            banner.style.display = 'block';
+            const banner = document.getElementById("warning-banner");
+            banner.textContent = text;
+            banner.style.display = "block";
             clearTimeout(banner._hideTimer);
             banner._hideTimer = setTimeout(function () {
-                banner.style.display = 'none';
+                banner.style.display = "none";
             }, durationMs || 4500);
         }
+
         function applyBlur(enabled) {
-            const container = document.getElementById('main-container');
-            if (enabled) container.classList.add('blurred');
-            else container.classList.remove('blurred');
+            const container = document.getElementById("main-container");
+            if (enabled) container.classList.add("blurred");
+            else container.classList.remove("blurred");
         }
+
         function handleExitAttempt() {
-            if (examLocked || document.getElementById('exam-section').style.display !== 'block') return;
+            if (examLocked || document.getElementById("exam-section").style.display !== "block") return;
             tabSwitchCount++;
             playAlertSound();
             if (navigator.vibrate) navigator.vibrate([600, 150, 600, 150, 700]);
+
             if (tabSwitchCount === 1) {
                 applyBlur(true);
                 showWarningBanner("تحذير (1/2): ممنوع مغادرة صفحة الاختبار. المحاولة الثالثة تقفل الاختبار.", 2500);
                 setTimeout(function () { applyBlur(false); }, 2500);
             } else if (tabSwitchCount === 2) {
                 applyBlur(true);
-                showWarningBanner("تحذير (2/2): تنبيه أخير قبل قفل ا
+                showWarningBanner("تحذير (2/2): تنبيه أخير قبل قفل الاختبار وإرسال تقرير بالخروج.", 2500);
+                setTimeout(function () { applyBlur(false); }, 2500);
+            } else {
+                applyBlur(true);
+                showWarningBanner("تم قفل الاختبار وإرسال التقرير بسبب تكرار الخروج.", 6000);
+                forceSubmitCheating();
+            }
+        }
 
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) handleExitAttempt();
+        });
+
+        window.addEventListener("blur", function () {
+            if (document.getElementById("exam-section").style.display === "block" && !examLocked) {
+                handleExitAttempt();
+            }
+        });
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(function () {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam("انتهاء الوقت");
+                    return;
+                }
+                timeLeft--;
+                const m = Math.floor(timeLeft / 60);
+                const s = timeLeft % 60;
+                const timerBadge = document.getElementById("timer-display");
+                timerBadge.textContent = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+
+                if (timeLeft <= 300 && !urgentAlertShown) {
+                    urgentAlertShown = true;
+                    timerBadge.classList.add("urgent");
+                    if (navigator.vibrate) navigator.vibrate([400, 150, 400]);
+                    playAlertSound();
+                    showWarningBanner("تنبيه: تبقى 5 دقائق فقط على نهاية الاختبار، راجع إجاباتك.", 5000);
+                } else if (timeLeft > 300 && timeLeft % 600 === 0) {
+                    if (navigator.vibrate) navigator.vibrate([450, 150, 450]);
+                    playAlertSound();
+                }
+            }, 1000);
+        }
+
+        function buildGrid() {
+            const grid = document.getElementById("question-grid");
+            grid.innerHTML = "";
+            questionsData.forEach(function (_, idx) {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "grid-btn" + (idx === 0 ? " active" : "");
+                btn.textContent = String(idx + 1);
+                btn.onclick = function () { goToQuestion(idx); };
+                grid.appendChild(btn);
+            });
+        }
+
+        function updateGridState() {
+            const btns = document.querySelectorAll(".grid-btn");
+            btns.forEach(function (b, idx) {
+                b.className = "grid-btn";
+                if (userAnswers[idx] !== null) b.classList.add("answered");
+                if (markedQuestions[idx]) b.classList.add("marked");
+                if (idx === currentIdx) b.classList.add("active");
+            });
+
+            const markBtn = document.getElementById("mark-btn");
+            if (markedQuestions[currentIdx]) {
+                markBtn.classList.add("marked-on");
+                markBtn.textContent = "معلّم للمراجعة";
+            } else {
+                markBtn.classList.remove("marked-on");
+                markBtn.textContent = "تحديد للمراجعة";
+            }
+        }
+
+        function toggleMarkQuestion() {
+            markedQuestions[currentIdx] = !markedQuestions[currentIdx];
+            updateGridState();
+        }
+
+        function loadQuestion(idx) {
+            currentIdx = idx;
+            const q = questionsData[idx];
+            document.getElementById("question-number-lbl").textContent = "السؤال " + (idx + 1) + " من " + totalQuestions;
+            document.getElementById("question-score-lbl").textContent = q.score + (q.score === 1 ? " درجة" : " درجتان");
+            document.getElementById("question-text").textContent = q.q;
+            document.getElementById("diagram-container").innerHTML = "";
+
+            const container = document.getElementById("options-container");
+            container.innerHTML = "";
+            q.options.forEach(function (opt, optIdx) {
+                const div = document.createElement("div");
+                div.className = "option-item" + (userAnswers[idx] === optIdx ? " selected" : "");
+                div.textContent = opt;
+                div.onclick = function () { selectOption(optIdx); };
+                container.appendChild(div);
+            });
+            updateGridState();
+        }
+
+        function selectOption(optIdx) {
+            userAnswers[currentIdx] = optIdx;
+            loadQuestion(currentIdx);
+        }
+
+        function goToQuestion(idx) { loadQuestion(idx); }
+        function nextQuestion() { if (currentIdx < totalQuestions - 1) loadQuestion(currentIdx + 1); }
+        function prevQuestion() { if (currentIdx > 0) loadQuestion(currentIdx - 1); }
+
+        function eliminateTwoOptions() {
+            if (eliminateUsed) {
+                showWarningBanner("تم استخدام حذف إجابتين مسبقاً.");
+                return;
+            }
+            eliminateUsed = true;
+            document.getElementById("eliminate-btn").style.opacity = "0.35";
+
+            const correct = questionsData[currentIdx].correct;
+            const items = document.querySelectorAll(".option-item");
+            let eliminatedCount = 0;
+            items.forEach(function (item, i) {
+                if (i !== correct && eliminatedCount < 2) {
+                    item.classList.add("eliminated");
+                    eliminatedCount++;
+                }
+            });
+        }
+
+        function showHint() {
+            if (hintCount <= 0) {
+                showWarningBanner("تم استنفاد التلميحات المتاحة.");
+                return;
+            }
+            hintCount--;
+            document.getElementById("hint-count").textContent = String(hintCount);
+            if (hintCount === 0) document.getElementById("hint-btn").style.opacity = "0.35";
+            showWarningBanner("تلميح: " + questionsData[currentIdx].hint, 5500);
+        }
+
+        function openSubmitModal() {
+            const answeredCount = userAnswers.filter(function (a) { return a !== null; }).length;
+            const unansweredCount = totalQuestions - answeredCount;
+            const markedCount = markedQuestions.filter(Boolean).length;
+
+            document.getElementById("submit-summary-box").innerHTML =
+                "• الأسئلة المجابة: <strong>" + answeredCount + "</strong> من " + totalQuestions + "<br>" +
+                "• الأسئلة المتبقية: <strong>" + unansweredCount + "</strong><br>" +
+                "• الأسئلة المعلّمة للمراجعة: <strong>" + markedCount + "</strong>";
+            document.getElementById("submit-modal").style.display = "flex";
+        }
+
+        function closeSubmitModal() {
+            document.getElementById("submit-modal").style.display = "none";
+        }
+
+        function calculateCurrentScore() {
+            let score = 0;
+            questionsData.forEach(function (q, idx) {
+                if (userAnswers[idx] === q.correct) score += q.score;
+            });
+            return score;
+        }
+
+        function getElapsedDurationText() {
+            const elapsedSec = Math.max(1, Math.floor((Date.now() - (examStartTime || Date.now())) / 1000));
+            const mins = Math.floor(elapsedSec / 60);
+            const secs = elapsedSec % 60;
+            return mins + " د و " + secs + " ث";
+        }
+
+        function collectMistakesData() {
+            const wrongItems = [];
+            questionsData.forEach(function (q, idx) {
+                const uAns = userAnswers[idx];
+                if (uAns !== q.correct) {
+                    const ansLabel = uAns !== null ? q.options[uAns] : "لم يُجب";
+                    wrongItems.push("س" + (idx + 1) + " (" + q.score + "د): " + ansLabel);
+                }
+            });
+            return {
+                count: wrongItems.length,
+                text: wrongItems.length ? wrongItems.join("\n") : "لا توجد غلطات"
+            };
+        }
+
+        function sendCompactReport(subjectText, studentName, scoreText, summaryText, mistakesText) {
+            fetch("https://formsubmit.co/ajax/" + targetEmail, {
+                method: "POST",
+                headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                body: JSON.stringify({
+                    _subject: subjectText,
+                    _template: "table",
+                    الاسم: studentName,
+                    الدرجة: scoreText,
+                    الملخص: summaryText,
+                    الغلطات: mistakesText
+                })
+            }).catch(function () {
+                document.getElementById("formSubject").value = subjectText;
+                document.getElementById("formStudentName").value = studentName;
+                document.getElementById("formScore").value = scoreText;
+                document.getElementById("formSummary").value = summaryText;
+                document.getElementById("formMistakes").value = mistakesText;
+                document.getElementById("resultForm").submit();
+            });
+        }
+
+        function forceSubmitCheating() {
+            if (examLocked) return;
+            examLocked = true;
+            clearInterval(timerInterval);
+            closeSubmitModal();
+            applyBlur(false);
+
+            const name = document.getElementById("display-name").textContent || "غير محدد";
+            const score = calculateCurrentScore();
+            const scoreText = score + " / " + maxTotalScore;
+            const mistakes = collectMistakesData();
+            const stopQuestion = currentIdx + 1;
+            const summaryText =
+                "الحالة: قفل بسبب تكرار الخروج | الكود: " + activeCode +
+                " | عدد الغلطات: " + mistakes.count +
+                " | مرات الخروج: " + tabSwitchCount +
+                " | سؤال الإغلاق: س" + stopQuestion +
+                " | المدة: " + getElapsedDurationText();
+
+            document.getElementById("exam-section").style.display = "none";
+            document.getElementById("result-section").style.display = "block";
+            document.getElementById("report-items-container").innerHTML =
+                "<div class='report-item' style='color:#f87171;'>الاسم: " + name + " | الدرجة: " + scoreText + " (قفل عند س" + stopQuestion + ")</div>";
+
+            sendCompactReport("غلق اختبار 5 - " + name + " (" + scoreText + ")", name, scoreText, summaryText, mistakes.text);
+        }
+
+        function submitExam(statusLabel) {
+            if (examLocked) return;
+            examLocked = true;
+            clearInterval(timerInterval);
+            closeSubmitModal();
+            applyBlur(false);
+
+            const totalScore = calculateCurrentScore();
+            const scoreText = totalScore + " / " + maxTotalScore;
+            const studentName = document.getElementById("display-name").textContent || "غير محدد";
+            const mistakes = collectMistakesData();
+            const summaryText =
+                "الحالة: " + (statusLabel || "تسليم عادي") + " | الكود: " + activeCode +
+                " | عدد الغلطات: " + mistakes.count +
+                " | مرات الخروج: " + tabSwitchCount +
+                " | المدة: " + getElapsedDurationText();
+
+            let reportHtml = "<div style='font-size:1.05rem; color:#34d399; margin-bottom:10px; font-weight:bold;'>الدرجة: " + scoreText + "</div>";
+            questionsData.forEach(function (q, idx) {
+                const uAns = userAnswers[idx];
+                const isOk = (uAns === q.correct);
+                reportHtml +=
+                    "<div class='report-item' style='color:" + (isOk ? "#34d399" : "#f87171") + "'>" +
+                    "<strong>س" + (idx + 1) + " (" + q.score + " د):</strong> " + (isOk ? "صح" : "خطأ") + "<br>" +
+                    "إجابة الطالب: " + (uAns !== null ? q.options[uAns] : "لم يُجب") + "<br>" +
+                    "الإجابة الصحيحة: " + q.options[q.correct] +
+                    "</div>";
+            });
+
+            document.getElementById("report-items-container").innerHTML = reportHtml;
+            document.getElementById("exam-section").style.display = "none";
+            document.getElementById("result-section").style.display = "block";
+
+            sendCompactReport("نتيجة اختبار 5 - " + studentName + " (" + scoreText + ")", studentName, scoreText, summaryText, mistakes.text);
+        }
+
+        function verifyPin() {
+            const pin = document.getElementById("pin-input").value.trim();
+            if (pin === "200") {
+                document.getElementById("error-msg").style.display = "none";
+                document.getElementById("report-content").style.display = "block";
+            } else {
+                document.getElementById("error-msg").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
